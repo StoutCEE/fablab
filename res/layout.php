@@ -3,25 +3,27 @@
 /* Page Titles:
  *  - $global_title[0] is short title
  *  - $global_title[1] is longer title
- *  - $global_title[2] is the prefix for longer title
  */
-$global_title = ["Stout Engineering","Engineering Labs","University of Wisconsin - Stout"];
+$global_title = ["Stout Engineering","UW Stout Engineering Labs"];
 
 /* Navigation Links:
  *  - $global_navURL[0] is main page
  *  - $global_navURL[1] is registration page
  * Other links may be added
  */
-$global_navURL = [["index.php", "Home"],
+$global_navURL = [["index.php", "Home"], 
 	["register.php", "Register"]];
 
 /* CSS Links:
  *  - $global_cssURL[0] is the reset sheet
  *  - $global_cssURL[1] is the style sheet
- * Other links may be added
  */
-$global_cssURL = ["res/css/reset.css", "res/css/style.css"];
+$global_cssURL = ["res/css/reset.css", "res/css/style.css"]; 
 
+/* Functions to Generate Layout Elements:
+ *  - layout_head() generates the <head> element
+ *  - layout_header() generates the <header> element in <body>
+*/
 function layout_head($t="") {
 	$title = $GLOBALS['global_title'];
 	$css = $GLOBALS['global_cssURL'];
@@ -38,36 +40,28 @@ function layout_head($t="") {
 			<link rel="stylesheet" href="'.$css[1].'">
 		</head>';
 	return $head;
-}
-function layout_header() {
+
+} function layout_body($output, $layout=0) {
+	
 	$title = $GLOBALS['global_title'];
-	$links = $GLOBALS['global_navURL'];
-	$header = '
-		<div class="title">
-			' . $title[2] . '<br />
-			' . $title[1] . '
-		</div>
-		<nav>'
-	foreach ($links as $l) {
+	$header = '<div class="title">' . $title[1] . '</div><nav>';
+	foreach ($GLOBALS['global_navURL'] as $l) {
 		$header .= '<a href="' . $l[0] . '">' . $l[1] .'</a>';
 	}
 	$header .= '</nav>';
-	return $header;
-}
-function layout_footer() {
-	return = '<footer></footer>';
+	
+	$main = '<main><section>' . $output . '</section></main>';
+	
+	$footer = '<footer></footer>';
+	
+	return '<body>' . $header . $main . $footer . '</body>';
+
 }
 
-
-// Generates a layout around the output given.
-function layout_output($output, $title = "") {
-	
-	$head = layout_head($t="");
-	$body = '
-		<body>' . layout_header() . '
-			<main><section>' . $output . '</section></main>' . layout_footer() . '
-		</body>';
-	
+// Generates entire layout
+function generate_layout($output, $title="") {
+	$head = layout_head($title);
+	$body = layout_body($output);
 	echo '<!doctype html><html>' . $head . $body . '</html>';
 }
 

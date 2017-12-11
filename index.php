@@ -1,7 +1,5 @@
 <?php 
-require "res/layout.php";
-
+require "./res/layout.php";
 $output = 'Welcome';
-
-layout_output($output);
+generate_layout('TEST');
 ?>
