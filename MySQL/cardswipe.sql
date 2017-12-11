@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `fryk214_checkin` (
 -- Table structure for table `students`
 --
 
-CREATE TABLE IF NOT EXISTS `fryk214_checkin` (
+CREATE TABLE IF NOT EXISTS `fryk101_checkin` (
   `checkin` datetime NOT NULL,
   `checkout` datetime NOT NULL,
   `id` int(9) unsigned NOT NULL,
