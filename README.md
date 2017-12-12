@@ -1,5 +1,16 @@
-# noncee_cardswipe
-This is a cardswipe setup for the Machining and Fabrication Lab
+# general_cardswipe
+This is a generalized cardswipe setup that can be used for multiple labs and groups
+
+## Overview:
+Another lab in Fryklund liked how the CEE Lab tracked users and wanted to replicate it in their own lab. With that said, a few issues came up:
+ - Most of the code will be identical, so it makes sense to have one repository. Updates should affect every lab, not just one.
+ - Users should be shared between labs. That way, students register once with the Engineering Labs rather than with the CEE Lab, Machining Lab, etc.
+ - It may be beneficial to make one cardswipe website, hosted on one machine, that has several specific lab pages. That way, all the website share the exact same code.
+ - If there is only one host for all cardswipe websites, there absolutely must be website backups and a way to handle the event that the website can't connect
+ - There may be a use for client/server hosts.
+ - This will also affect MySQL database configurations
+
+# Machine and Fabrication Lab
 
 ## Overview:
 The Machining and Fabrication Lab in Fryklund likes the CEE Check-in Website. Their students currently sign in and sign out on a paper sheet. They would like us to set them up with another Linux server hosting a customized login site. There will be some code differences that need to be made.
@@ -41,9 +52,3 @@ The Machining and Fabrication Lab in Fryklund likes the CEE Check-in Website. Th
   - Sheet-Metal
   - Capstone
   - MISC
-
-# Notes and Thoughts:
- - It may not be a bad idea to share users. That way, students register once with the Engineering Labs rather than with the CEE Lab, Machining Lab, etc.
- - It also may be beneficial to make one cardswipe website, hosted on one machine, that has several specific pages. That way, all the website share the same code.
- - If there is only one host for all cardswipe websites, there should still be multiple backups and a plan for not being able to connect to the host.
- - Will websockets ever be a beneficial plan? Because we're going to start getting to the point where switching to Node.js or another language that's better for websockets will be difficult.
