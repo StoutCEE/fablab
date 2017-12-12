@@ -1,0 +1,32 @@
+<users>
+	<categories>
+		<category>Student</category>
+		<category>Faculty</category>
+		<category>Staff</category>
+	</categories>
+	<students>
+		<input name="major">
+			<option>Computer Engineering</option>
+			<option>Engineering Technology</option>
+			<option>Applied Math and Computer Science</option>
+			<option>Other</option>
+		</input>
+		<input name="class">
+			<option>Freshman</option>
+			<option>Sophomore</option>
+			<option>Junior</option>
+			<option>Senior</option>
+		</input>
+		<input name="graduation">
+			<option>Spring </option>
+			<option>Summer </option>
+			<option>Fall </option>
+			<option>Winter </option>
+			<option>Unsure</option>
+		</input>
+	</students>
+	<staff_faculty>
+		<input name="department">
+		</input>
+	</staff_faculty>
+</users>
