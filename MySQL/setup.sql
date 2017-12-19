@@ -99,7 +99,9 @@ ALTER TABLE `labs` ADD UNIQUE KEY `id` (`id`);
 -- Table structure for table `student_orgs`
 CREATE TABLE IF NOT EXISTS `student_orgs` (
   `id` int unsigned NOT NULL,
-  `email` text NOT NULL
+  `email` text NOT NULL,
+  `orgsync` text NOT NULL,
+  `website` text
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 ALTER TABLE `student_orgs` ADD UNIQUE KEY `id` (`id`);
 
