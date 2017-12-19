@@ -63,3 +63,33 @@ main {
 } main section {
 	margin:              1em;
 }
+
+main form {
+	text-align:          center;
+} main form input, main form select {
+	width:               20em;
+	font-size:           1em;
+	margin:              0em;
+} main form > input {
+	background:          #97CE68;
+	color:               #FFFFFF;
+	border:              none;
+	border-radius:       1em;
+	padding:             .5em;
+	margin:              1em 0em;
+} main form > input:hover {
+	background:         #BDBAB4;
+	color:              #000000;
+	border:             none;
+	border-radius:      1em;
+	padding:            .5em;
+	margin:             1em 0em;
+} main form table {
+	width: 100%;
+} main form td {
+	padding: .25em .5em;
+	text-align: left;
+} main form td:first-child {
+	text-align: right;
+	width: 10em;
+}
