@@ -1,5 +1,7 @@
 <?php 
-require "/res/php/layout.php";
-$output = 'Welcome';
-generate_layout('TEST');
+require "res/generate.php";
+
+$output = msg_addimg('Welcome to the Stout CEE Lab Website');
+
+echoLayout($output);
 ?>

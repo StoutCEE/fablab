@@ -2,15 +2,15 @@
 require "res/generate.php";
 require "res/dbaccess.php";
 
-$title = "Register";
+$title = "Machine";
 $output = "";
 
-if (isset($_POST[$dbt_student[2]])) {
+if (isset($_POST[$dbt_machine[1]])) {
 	$c = connectDB();
-	$output = addStudent($c);
+	$output = addMachine($c);
 	disconnectDB($c);
 } else {
-	$output = addStudentForm();
+	$output = addMachineForm();
 }
 
 echoLayout($output,$title);
