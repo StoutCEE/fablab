@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Stout Engineering</title>
+	<link rel="stylesheet" href="res/css/reset.css">
+	<link rel="stylesheet" href="res/css/style.css">
+	<script type="text/javascript" src="res/js/forms.js"></script>	
+</head>
+<body>
+	<header>
+		<h1>UW Stout Engineering</h1>
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Register</a>
+			<a href="#">Add Machine</a>
+			<a href="#">Delete Machine</a>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<form action="register.php" method="post">
+				<table>
+					<tr>
+						<td>Stout ID</td>
+						<td><input type="number" name="id" autofocus  required></input></td>
+					</tr><tr>
+						<td>Stout Username</td>
+						<td><input type="text" name="username"  required></input></td>
+					</tr><tr>
+						<td>I'm a </td>
+						<td>
+							<select name="category"  onchange="user_specific()" >
+								<option>----</option>
+								<option>Student</option>
+								<option>Faculty</option>
+								<option>Staff</option>
+							</select>
+						</td>
+					</tr>
+					<td>Machine Name </td>
+						<td>
+							<select name="category"  onchange="user_specific()" >
+								<option>----</option>
+								<option>Mill-Red</option>
+								<option>Mill-Blue</option>
+								<option>Mill-Green</option>
+								<option>Mill-Orange</option>
+								<option>Mill-Yellow</option>
+								<option>Mill-Horizontal</option>
+								<option>NL-1</option>
+								<option>LL-1</option>
+								<option>DL-1</option>
+								<option>DL-2</option>
+								<option>DL-3</option>
+								<option>DL-4</option>
+								<option>DL-5</option>
+								<option>DL-6</option>
+								<option>SBL-1</option>
+								<option>SBL-2</option>
+								<option>SBL-3</option>
+								<option>SBL-4</option>
+								<option>CNM-1</option>
+								<option>CNM-2</option>
+								<option>CNM-3</option>
+								<option>CNM-4</option>
+								<option>CNM-5</option>
+								<option>CNL-1</option>
+								<option>CNL-2</option>
+								<option>Vice-Area</option>
+								<option>Sheet-Metal</option>
+								<option>Capstone</option>
+								<option>MISC</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<table id="user_specific">
+				</table>
+				<input type="submit" value="Submit"></input>
+			</form>
+		</section>
+	</main>
+	<footer></footer>
+</body>
+</html>
